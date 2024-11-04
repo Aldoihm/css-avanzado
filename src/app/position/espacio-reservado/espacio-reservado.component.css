@@ -1,0 +1,16 @@
+/* .contenedor{
+    outline: 5px solid red;
+} */
+
+.contenedor p{
+    padding: 1rem;
+    border:10px solid;
+    /* con opacidad, se hace un elemento transparente */
+    opacity: 0;
+    display: none;
+}
+
+/* El espacio reservado es el modelo de caja 
+    Se refiere a el espacio que ocupa un elemento en el DOM,
+    en el ejemplo, contenedor p, no se vé en el dom, pero esta en el template
+*/

@@ -1,0 +1,26 @@
+.navbar{
+    background: var(--blue-dark-sotec);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.26);
+}
+.menu{
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+.menu li{
+    padding: 1em;
+    background-color: var(--blue-dark-sotec);
+}
+
+.menu a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    color: var(--white-sotec);
+}
+
+.menu li:hover{
+    background-color: var(--blue-sotec);
+    cursor: pointer;
+}
