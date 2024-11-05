@@ -11,16 +11,37 @@
 .menu li{
     padding: 1em;
     background-color: var(--blue-dark-sotec);
-}
-
-.menu a{
-    text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: .9rem;
-    color: var(--white-sotec);
+    color:var(--white-sotec);
 }
 
 .menu li:hover{
     background-color: var(--blue-sotec);
     cursor: pointer;
+}
+
+
+.submenu{
+    position: absolute;
+    top:2.5rem;
+    left: 1rem;
+    background-color: var(--blue-sotec);
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.26);
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+.submenu a{
+    display: block;
+    text-decoration: none;
+    color: var(--white-sotec);
+    font-size: .85rem;
+    font-family: 'Roboto', sans-serif;
+    padding: .4rem .5rem;
+}
+
+.submenu a:hover{
+    background-color: var(--blue-light-sotec);
+    border-radius: 5px;
 }

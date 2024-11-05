@@ -1,0 +1,35 @@
+/* 
+    Para poder ubicar un elemento en cualquier parte de mi layout
+    propiedades de position: static | relative | absolute | fixed | sticky
+
+    static: es la posición por defecto de los elementos, se apila uno sobre otro
+    
+    Propiedades offset: 
+    -top
+    -right
+    -left
+    -bottom
+    
+    Las propiedades offset son las que me permiten mover un elemento en cualquier dirección
+    Se usan cuando un elemento ya tiene una propiedaded position
+    
+*/
+.p-2{
+    position:relative;
+    background: tomato;
+    /* Baja 2 rem y luego empieza el elemento, puedo mover el offset para ir probando 
+    Puedo usar números negativos y varias unidades de medidas, pero en % no funciona, hasta que relitive tenga un height*/
+    top:2rem;
+    opacity: 0.7;
+}
+/* Relative:: Necesita estar dentro de un contenedor padre que tenga un altura fija (height), 
+para que se pueda usar offset con porcentajes. Comentar las lineas de abajo para que se puedan ver las diferencias */
+
+.contenedor{
+    outline:1px solid;
+    height: 400px;
+}
+
+.p-2{
+    top:40%
+}

@@ -9,5 +9,10 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'css-avanzado';
+  title:string = 'css-avanzado';
+  positionMenu: boolean = false;
+
+  togglePositionMenu(){
+    this.positionMenu = !this.positionMenu;
+  }
 }

@@ -1,8 +1,19 @@
 <div class="navbar">
   <ul class="menu">
-    <a><li [routerLink]="['/position/flujo']">Flujo</li></a>
-    <a><li [routerLink]="['/position/espacio-reservado']">Espacio Reservado</li></a>
+    <li>
+      <a [routerLink]="['']">
+      </a>
+    </li>
+    <li (click)="togglePositionMenu()">Position</li>
+    @if(positionMenu) {
+      <div class="submenu">
+        <a (click)="togglePositionMenu()" [routerLink]="['/position/flujo']">Flujo</a>
+        <a (click)="togglePositionMenu()" [routerLink]="['/position/espacio-reservado']">Espacio Reservado</a>
+        <a (click)="togglePositionMenu()" [routerLink]="['/position/offset']">Offset</a>
+      </div>
+    }
   </ul>
-</div>
+</div> 
+<img src="assets/img/homa.png" class="logo">
 
 <router-outlet />
