@@ -1,0 +1,17 @@
+/* Relative
+    No pierde su espacio reservado el elemento
+    La referencia comienza desde su posición inicial en donde de encuentra en ese momento.
+*/
+.container{
+    border-left:2px solid green;
+    border-top:2px solid green;
+}
+
+.p-2{
+    position: relative;
+    background:tomato;
+    opacity: .5;
+    /* Observar que con top y left, respeta su referencia */
+    top:1rem;
+    left: 1rem;
+}

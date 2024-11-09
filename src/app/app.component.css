@@ -1,6 +1,7 @@
 .navbar{
     background: var(--blue-dark-sotec);
     box-shadow: 0px 5px 20px rgba(0,0,0,0.26);
+    height: 3rem;
 }
 .menu{
     display: flex;
@@ -10,7 +11,7 @@
 
 .menu li{
     padding: 1em;
-    background-color: var(--blue-dark-sotec);
+    background-color: transparent;
     font-family: 'Roboto', sans-serif;
     font-size: .9rem;
     color:var(--white-sotec);
@@ -19,13 +20,12 @@
 .menu li:hover{
     background-color: var(--blue-sotec);
     cursor: pointer;
+    height: 3rem;
 }
 
 
 .submenu{
-    position: absolute;
-    top:2.5rem;
-    left: 1rem;
+    position: relative;
     background-color: var(--blue-sotec);
     box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.26);
     border-radius: 5px;

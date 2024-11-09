@@ -25,7 +25,7 @@
 /* Relative:: Necesita estar dentro de un contenedor padre que tenga un altura fija (height), 
 para que se pueda usar offset con porcentajes. Comentar las lineas de abajo para que se puedan ver las diferencias */
 
-.contenedor{
+.container{
     outline:1px solid;
     height: 400px;
 }
