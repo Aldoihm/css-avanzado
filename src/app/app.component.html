@@ -6,7 +6,7 @@
     <li (click)="togglePositionMenu()">
       Position
       @if(positionMenu) {
-        <div class="submenu">
+        <div class="submenu" (click)="togglePositionMenu()">
           <a (click)="togglePositionMenu()" [routerLink]="['/position/flujo']">Flujo</a>
           <a (click)="togglePositionMenu()" [routerLink]="['/position/espacio-reservado']">Espacio Reservado</a>
           <a (click)="togglePositionMenu()" [routerLink]="['/position/offset']">Offset</a>

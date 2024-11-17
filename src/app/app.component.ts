@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,7 @@ export class AppComponent {
   title:string = 'css-avanzado';
   positionMenu: boolean = false;
 
+  constructor(private router: Router) {}
   togglePositionMenu(){
     this.positionMenu = !this.positionMenu;
   }
