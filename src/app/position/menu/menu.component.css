@@ -1,0 +1,50 @@
+.header{
+    width: 100%;
+    background: #000;
+    font-family: sans-serif;
+}
+
+.nav{
+    display: flex;
+    justify-self: center;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+}
+
+.submenu{
+    flex-direction: column;
+    position:absolute;
+    top:100%;
+    background: #000;
+    display: none;
+}
+
+
+.menu .submenu .submenu{
+    left:100%;
+    top:0;
+    /* display:none; */
+}
+
+.item{
+    position: relative;
+}
+
+.item:hover > .submenu{
+    display: flex;
+}
+
+.link{
+    display: inline-block;
+    padding:0.5rem 0.75rem;
+    color:white;
+    text-decoration: none;
+    width: 100%;
+}
+
+.link:hover{
+    background: gray;
+}
