@@ -75,3 +75,9 @@
 .item .link:hover{
     background-color: var(--blue-light-sotec);
 }
+
+/* Nota importante, al hacer los menus, con css, al momento de
+dar click a la opción, el menú no desaparece hasta que saques el
+mouse del menu, pero es mejor para no hacer
+el montonal de directivas con if y sus respectivos métodos
+así le hacen en edteam*/
