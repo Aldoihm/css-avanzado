@@ -2,6 +2,7 @@
     background: var(--blue-dark-sotec);
     box-shadow: 0px 5px 20px rgba(0,0,0,0.26);
     height: 3rem;
+    width: 100%;
 }
 .menu{
     display: flex;
@@ -9,44 +10,68 @@
     list-style: none;
 }
 
-.menu li{
-    padding: 1em;
+
+.menu > .item{
+    padding: 1rem;
+    display: inline-block;
+    height: 100%;
     background-color: transparent;
     font-family: 'Roboto', sans-serif;
     font-size: .9rem;
     color:var(--white-sotec);
     position:relative;
+    width: max-content;
 }
 
-.menu li:hover{
+.menu > .img{
+    padding:0 1rem;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.menu .item:hover{
     background-color: var(--blue-sotec);
     cursor: pointer;
-    height: 3rem;
+}
+
+.menu .item:hover > .submenu{
+    display: flex;
+    flex-direction: column;
 }
 
 
 .submenu{
-    margin-top: 1rem;
-    margin-left: -.5rem;
+    display:none;
     position: absolute;
+    list-style: none;;
+    top:100%;
+    left:-3%;
     background-color: var(--blue-sotec);
     box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.26);
     border-radius: 5px;
-    padding: .5rem;
     width: max-content;
     z-index: 100;
+    padding: .5rem 0;
 }
 
-.submenu a{
-    display: block;
+.link{
+    display: inline-block;
     text-decoration: none;
     color: var(--white-sotec);
-    font-size: .85rem;
-    font-family: 'Roboto', sans-serif;
-    padding: .4rem .5rem;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem .6rem;
+    border-radius: 5px;
 }
 
-.submenu a:hover{
-    background-color: var(--blue-light-sotec);
+.submenu .item{
+    font-size: .85rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 .4rem;
     border-radius: 5px;
+}
+
+.item .link:hover{
+    background-color: var(--blue-light-sotec);
 }

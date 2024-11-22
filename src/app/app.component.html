@@ -1,29 +1,38 @@
-<div class="navbar">
+<nav class="navbar">
   <ul class="menu">
-    <li><a [routerLink]="['']">
-      <img  src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png" width="25px" height="25px"/>
+    <li class="img"><a [routerLink]="['']">
+      <img  src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png"  height="25px"/>
     </a></li>
-    <li (click)="togglePositionMenu()">
+    <li class="item">
       Position
-      @if(positionMenu) {
-        <div class="submenu" (click)="togglePositionMenu()">
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/flujo']">Flujo</a>
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/espacio-reservado']">Espacio Reservado</a>
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/offset']">Offset</a>
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/relative']">Position Relative</a>
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/absolute']">Position Absolute</a>
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/tooltip']">Ejercicio Tooltip</a>
-          <a (click)="togglePositionMenu()" [routerLink]="['/position/menu']">Menú Desplegable</a>
-        </div>
-      }
-  </li>
-    <li>Position II</li>
-    <li>Variables CSS</li>
-    <li>Pseudo Elementos</li>
-    <li>Listas y Contenedores</li>
-    <li>Texto</li>
-    <li>Tablas y Formularios</li>
+      <ul class="submenu">
+        <li class="item"> <a class="link" [routerLink]="['/position/flujo']">Flujo</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/espacio-reservado']">Espacio Reservado</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/offset']">Offset</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/relative']">Position Relative</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/absolute']">Position Absolute</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/tooltip']">Ejercicio Tooltip</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/menu']">Menú Desplegable</a> </li>
+      </ul>
+    </li>
+    <li class="item">
+      Position II
+      <ul class="submenu">
+        <li class="item"> <a class="link" [routerLink]="['/position/flujo']">Flujo</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/espacio-reservado']">Espacio Reservado</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/offset']">Offset</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/relative']">Position Relative</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/absolute']">Position Absolute</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/tooltip']">Ejercicio Tooltip</a> </li>
+        <li class="item"> <a class="link" [routerLink]="['/position/menu']">Menú Desplegable</a> </li>
+      </ul>
+    </li>
+    <li class="item">Variables CSS</li>
+    <li class="item">Pseudo Elementos</li>
+    <li class="item">Listas y Contenedores</li>
+    <li class="item">Texto</li>
+    <li class="item">Tablas y Formularios</li>
   </ul>
-</div>
+</nav>
 
 <router-outlet />
