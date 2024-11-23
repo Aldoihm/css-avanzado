@@ -46,7 +46,6 @@
     position: absolute;
     list-style: none;;
     top:100%;
-    left:-3%;
     background-color: var(--blue-sotec);
     box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.26);
     border-radius: 5px;
