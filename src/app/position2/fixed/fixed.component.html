@@ -1,13 +1,31 @@
 <header class="header">
     <ul class="menu">
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Contacto</a></li>
-        <li><a href="">Servicios</a></li>
-        <li><a href="">Nosotros</a></li>
+        <li><a (click)="scrollToSection('section-1')">Section-1</a></li>
+        <li><a (click)="scrollToSection('section-2')">Section-2</a></li>
+        <li><a (click)="scrollToSection('section-3')">Section-3</a></li>
     </ul>
 </header>
-<div class="contenedor">    
-    <h1>Hola Mundo</h1>
-    <p class="fixed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, corporis? Perferendis harum impedit inventore qui sit, quaerat laborum est reprehenderit molestiae, facere eos? Neque, nostrum consectetur quasi placeat quae expedita!</p>
-    <p>Sapiente laudantium eum reiciendis vel quas sint nemo. Maxime porro, placeat minima voluptas consequuntur distinctio, eveniet dolores doloremque dolorem nesciunt error architecto non neque nam sequi soluta praesentium debitis dolore.</p>
+<div class="contenedor">
+    <div class="container">
+        <main>
+            <section id="section-1">
+                <h2>Section 1</h2>
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, excepturi quis quod quam eaque doloremque. Maiores, fugit! Consequatur rerum dolore dolorum doloribus quia. Odit ex nihil tempora error quam ipsum.</span><span>Obcaecati doloribus dolores aliquid beatae accusamus eum iste laudantium quas rerum alias! Nobis, nemo reiciendis vero velit consectetur culpa. Recusandae quod a inventore natus eligendi voluptatibus qui tenetur, praesentium cumque.</span><span>Ratione amet, ut et quae enim, doloribus sint quos architecto facere, alias atque dolore quas dolores veritatis eaque sapiente expedita ipsam magnam saepe soluta. Porro eum beatae at ea? Consectetur!</span></p>
+            </section>
+            <section id="section-2">
+                <h2>Section 2</h2>
+                <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, libero? Necessitatibus eveniet dolore sunt esse beatae impedit, maxime dolor similique. Quos velit architecto laborum? Consequuntur sequi ex temporibus cum perspiciatis!</span><span>Id quia, harum reiciendis corporis repudiandae sint ipsam suscipit vitae nulla similique recusandae facere aspernatur saepe libero officiis molestiae. Quia repellendus reiciendis consequatur consequuntur? Commodi magni quo unde molestias hic.</span><span>Et alias est magnam eum tenetur. Totam omnis fugiat ea dolorum voluptatem accusamus expedita consequuntur, laborum officia reiciendis quisquam minus ipsam id deserunt incidunt iusto dolorem nostrum a provident cum.</span></p>
+            </section>
+            <section id="section-3">
+                <h2>Section 3</h2>
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsum mollitia modi maxime ipsam, culpa placeat soluta esse, ipsa, eos animi aliquid voluptas? Labore soluta qui ipsum placeat inventore vero?</span><span>Ipsum ipsa expedita reiciendis odit perferendis, pariatur eum. Veniam sed minus quis autem deserunt animi quisquam voluptatibus, temporibus quas nemo debitis aperiam cumque id, minima fuga ipsa a nisi placeat?</span><span>Dolores numquam quia facere voluptas rerum magni quis aspernatur hic incidunt doloribus iste corporis, porro iure perferendis alias. Nobis placeat velit molestiae. Iusto sint velit dignissimos vel esse, placeat dolore.</span></p>
+            </section>   
+        </main>
+        <aside>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda eos consequatur distinctio nemo quidem illum facilis! Voluptatum nostrum nam molestias deserunt totam, est eligendi magnam earum eum eius nisi impedit?</p>
+            <div class="sidebar">
+                Esto es un sidebar
+            </div>
+        </aside>
+    </div> 
 </div>

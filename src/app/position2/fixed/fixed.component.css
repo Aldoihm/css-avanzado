@@ -4,7 +4,6 @@
     Un uso frecuente es el menu de navegación
 */
 .contenedor{
-    min-height: 200vh;
     margin-top: 3rem;
 }
 
@@ -18,6 +17,10 @@
     list-style: none;
     display: flex;
     gap: 1rem;
+}
+
+.menu:hover{
+    cursor: pointer;
 }
 
 li{
@@ -35,4 +38,31 @@ a{
     position: fixed;
     background: red;
     opacity: 0.5;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 200vh;
+
+}
+
+main{
+    grid-column-start: span 3;
+}
+
+/* Position stiky no pierda su espacio reservado 
+    La referencia es el viewport, osea el total de la pantalla
+    para que se quede fijo en el viewport, se debe agregar un valor a top,
+    sino no se queda en el viewport
+
+    Se usa para elementos que se queden fijos en el viewport, como un sidebar
+    o alguna tarjeta que quiero que se quede pegada
+*/
+.sidebar{
+    position:sticky;
+    /* sino tiene top, no se queda visible en el viewport */
+    top:6rem;
+    background: tomato;
+    height: 400px;
 }
