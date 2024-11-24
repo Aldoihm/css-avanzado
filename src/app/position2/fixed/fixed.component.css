@@ -1,0 +1,38 @@
+/* Con fixed, pierda su espacio reservado = que absolute 
+    Con fixed, se queda en la misma posición aunque hagamos scroll
+    La referencia es el viewport, osea el total de la pantalla
+    Un uso frecuente es el menu de navegación
+*/
+.contenedor{
+    min-height: 200vh;
+    margin-top: 3rem;
+}
+
+.header{
+    background: black;
+    width: 100%;
+    position:fixed;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+li{
+    padding: 1rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.fixed{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background: red;
+    opacity: 0.5;
+}
