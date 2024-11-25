@@ -1,0 +1,39 @@
+/* Stacking; Apilamiento 
+    La interpetración de cualquier elemento html (cualquier etiqueta) en el eje imaginario z
+    Significa que un elemento se apila encima de otro y a esto le llama el eje z
+    Se ve cuando le colocas opacidad a los elementos y se ve uno de bajo del otro
+    Osea que en diseño, el eje z se refiere a las capas.
+
+    ¿Cómo se determina cuál va encima del otro?
+    nivel 1: Elementos con nivel de apilamiento negativo
+    nivel 2: Elementos con position static
+    nivel 3: Elementos con nivel netro (0) o auto (los demás position que no son static)
+    nivel 4: Elementos con nivel de apilamiento mayor a cero
+
+    Cuando posicionamos un elemento, en automático tiene un nivel 3 (neutro o auto) de posicionamiento
+    Nota importante: cuanto todos tienen el mismo nivel de apilamiento, el nivel de apilamiento se decide en el flujo del documento
+
+    En conclusión el nivel 1 va hasta abajo y el nivel 4 va hasta arriba
+*/
+
+.element{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.element:nth-of-type(1){
+    background: red;
+    top: 100px;
+}
+.element:nth-of-type(2){
+    background: green;
+    top:100px;
+}
+.element:nth-of-type(3){
+    background: yellow;
+    position: static;
+}
+.element:nth-of-type(4){
+    background: blue;
+}
