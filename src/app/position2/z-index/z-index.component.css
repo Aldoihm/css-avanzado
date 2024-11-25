@@ -1,0 +1,60 @@
+/* 
+    Elementos principales que usan z-index:
+    - Elementos posicionados
+    - Elementos hijos de flex y grid containers con z-index distinto a auto. Esto significa que yo los debo cambiar manualmente
+    
+    Propiedades que ignoraran el z-index:
+    - Elementos con opacity, filtros, mix-blend-mode y perspectiva con valor diferente al inicial
+
+    En z-index, no se pueden usar decimales, solo enteros
+    Se recomienda usar z-index de con numeros de 10 en 10 y no de 1 en 1
+
+    NOTA SUPER IMPORANTE: Z-index no puede competir contra los elementos padres, solo contra los hermanos
+    osea que si el papa tiene un z-index de 1 y el hijo tiene un z-index de 2, el hijo no va a poder competir contra el papa
+
+    Para que un elemento hijo pueda competir contra el papa, no le debemos dar un nivel de apilamiento al papa,
+    para que los hijos no tengan contexto y puedan estar por detras del papá
+*/
+
+.element{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.element:nth-of-type(1){
+    background: red;
+    top: 100px;
+}
+.element:nth-of-type(2){
+    background: green;
+    /* top:100px; */
+}
+.element:nth-of-type(3){
+    display: flex;
+    background: yellow;
+    /* Si quito el z index- el hijo podrá estár atrás del papa */
+    z-index: 1;
+}
+
+/* Observar que a pesar de tener un z-index mas bajo(-10),
+el child sigue estando por arriba del elemento padre */
+.child{
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    position: relative;
+    left: 125px;
+    z-index: -10;
+}
+
+.child:nth-child(2){
+    background: cornflowerblue;
+    left:50px;
+    top: 50px;
+    z-index: 10;
+}
+
+.element:nth-of-type(4){
+    background: blue;
+}
