@@ -6,6 +6,10 @@
     --blue-light-sotec: #00afef;
     --purple-sotec: #3e4095;
     --white-sotec:#eee;
+    --primary-color: blueviolet;
+    --min-size:2rem;
+    --max-size:3rem;
+    --size: calc(var(--min-size) + var(--max-size));
 }
 
 *{

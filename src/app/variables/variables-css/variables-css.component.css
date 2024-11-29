@@ -1,0 +1,44 @@
+/* 
+    Declaración de la variable: las variables son sensative case
+    Dice que no son variables sino propiedades personalizadas
+    :root {
+        --custom-name: value;
+        --color: hsl | rgba | hex;
+        --border: 1px solid red;
+        --text: 'Hola munndo';
+        --shadow: 2px 2px red, 2px 2px red, 2px 2px red;
+        --color-two: var(--color);
+    }
+    Uso de la variable
+    El fallback se usa cuando hay un error en el navegador
+    .class {
+        property: var(--custom-name, fallback);
+    }
+
+    Al parecer en angular no puedo estar declarando donde sea la propiedad root
+
+    Para sumar con variables se usa calc
+    Este ejemplo está en el archivo de style, ya que no puedo usar root aquí con angular
+    :root{
+        --min-size:2rem;
+        --max-size:3rem;
+        --size: calc(var(--min-size) + var(--max-size));
+    }
+*/
+
+header{
+    width: 100%;
+    height: 3rem;
+    background: var(--primary-color);
+}
+
+/* Ejemplo fallback */
+h2, p{
+    color:var(--primary-Color,var(--blue-light-sotec));
+}
+
+.element{
+    width: var(--size);
+    height: var(--size);
+    background: var(--primary-color);
+}
