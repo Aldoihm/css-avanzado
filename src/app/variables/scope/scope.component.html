@@ -1,0 +1,51 @@
+<div class="contenedor">
+    <pre>
+    Scope es el alcance que tiene una variable en un programa.
+    En CSS el scope es a nivel del DOM y no a nivel de bloque.
+    
+    1.- Global Scope
+        
+                        :root&#123;
+                            --color: red;    
+                        &#125;
+
+    Es en cualquier parte de la página web.
+
+    2.- DOM Scope
+
+                        article&#123;
+                            --color: blue;
+                            color: var(--color);
+                        &#125;
+
+    Todos los hijos de <code>article</code> pueden acceder a la variable <code>--color</code>.
+    Y si están importando el style desde otro archivo, también pueden acceder a la variable, 
+    aplicando la misma regla: todos los hijos de <code>article</code> pueden acceder a la variable <code>--color</code>.
+
+    3.- Local Scope
+
+                        p&#123;
+                            --color: blue;
+                            color: var(--color);
+                        &#125;
+
+    Solo los hijos de <code>p</code> pueden acceder a la variable <code>--color</code>.
+
+    
+    Concepto HOISTING
+
+                        p&#123;
+                            color: var(--color);
+                        &#125;
+                        :root&#123;
+                            --color: red;
+                        &#125;
+
+    En este ejemplo, la variable <code>--color</code> se declara después de que se usa en el <code>p</code>. 
+    Pero el navegador lo entiende y lo aplica correctamente.
+    Así que no importa el orden en que se declaren las variables, 
+    el navegador las entiende y las aplica correctamente.
+    </pre>
+</div>
+
+

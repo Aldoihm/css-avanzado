@@ -1,0 +1,47 @@
+/* Scope
+    Scope es el alcance que tiene una variable en un programa.
+    En css el scope es a nivel del DOM y no a nivel de bloque.
+    
+    1.- Global Scope
+
+    :root{
+        --color: red;    
+    }
+
+    Es en cualquier para de la página web.
+
+    2.- DOM Scope
+
+    article{
+    --color: blue;
+     color: var(--color);
+    }
+
+    Todos los hijos de article pueden acceder a la variable --color
+    Y si estan importando el style desde otro archivo, también pueden acceder a la variable, 
+    aplicando la misma regla: todos los hijos de article pueden acceder a la variable --color
+
+    3.- Local Scope
+
+    p{
+        --color: blue;
+        color: var(--color);
+    }
+
+    Solo los hijos de p pueden acceder a la variable --color
+
+    
+    Concepto HOISTING
+
+    p{
+        color: var(--color);
+    }
+    :root{
+        --color: red;
+    }
+
+    En este ejemplo. La variable --color se declara después de que se usa en el p. 
+    Pero el navegador lo entiende y lo aplica correctamente.
+    Así que no importa el orden en que se declaren las variables, 
+    el navegador las entiende y las aplica correctamente.
+*/
