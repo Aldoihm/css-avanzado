@@ -1,0 +1,17 @@
+/* se crea la variable --color */
+.contenedor {
+  --color:tomato;
+  color:var(--color)
+}
+
+.container{
+    color:royalblue;
+}
+
+/* La nueva variable --color, esta heredando la variable --color, no  el valor del color
+    inherit es inherente.  Inherente significa que está unido a algo de una manera que es imposible de separar.
+*/
+.container p{
+    --color: inherit;
+    color: var(--color);
+}
