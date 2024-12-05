@@ -10,6 +10,7 @@
     --min-size:2rem;
     --max-size:3rem;
     --size: calc(var(--min-size) + var(--max-size));
+    --menu-height: 3rem;
 }
 
 *{

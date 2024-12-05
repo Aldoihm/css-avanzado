@@ -1,0 +1,67 @@
+/* Mobile */
+.container{
+    --header-height: 2rem;
+    --header-margin:.5rem;
+    --font-size: 1rem;
+    --title-font-size: 1.5rem;
+    --columns: 1;
+    --show-element: none;
+}
+/* Desktop */
+@media screen and (min-width: 768px){
+    .container{
+        --header-height: 4rem;
+        --header-margin:1rem;
+        --font-size: 1.25rem;
+        --title-font-size: 2rem;
+        --columns: 4;
+        --show-element: block;
+    }
+}
+
+header{
+    position: fixed;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: #000;
+}
+
+.body{
+    margin-top: var(--header-height);
+    padding-top: var(--header-margin);
+    padding-left: var(--header-margin);
+    font-size: var(--font-size);
+
+}
+h1{
+    font-size: var(--title-font-size);
+}
+
+.body{
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+main{
+    grid-column-start: span 3;
+}
+
+h2{
+    background: tomato;
+    padding: 1rem;
+}
+h3{
+    display: var(--show-element);
+}
+
+/* Conclusion 
+    Las configuraciones que cambian entre desktop y mobile son:
+    header-height: Tamaño del encabezado
+    header-margin: Margen del encabezado
+    font-size: Tamaño de la fuente
+    title-font-size: Tamaño de la fuente del título
+    columns: Número de columnas
+    show-element: Mostrar u ocultar un elemento
+    Usar variables css es fundamental para responsive web desing
+*/
